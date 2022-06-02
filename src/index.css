@@ -4,6 +4,18 @@
 }
 
 body {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./assets/money.png);
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./assets/banner2.jpg);
     background-size: cover;
+}
+
+.explore{
+    /* text-decoration: none; */
+    color: #fff;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    margin-right: 3cm;
+    margin-top: 1cm;
+    font-style: inherit;
+    font-size: large;
 }

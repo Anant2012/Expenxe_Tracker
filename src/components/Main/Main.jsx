@@ -12,10 +12,13 @@ const ExpenseTracker = () => {
   const { balance } = useContext(ExpenseTrackerContext);
 
   return (
+    <>
+    <a class="explore" href='http://localhost:3000/'>Explore</a>
     <Card className={classes.root}>
-      <CardHeader title="Expense Tracker" subheader="Powered by Speechly" />
+      
+      <CardHeader title="Expense Tracker" subheader="Created by Anant Singh" />
       <CardContent>
-        <Typography align="center" variant="h5">Total Balance ${balance}</Typography>
+        <Typography align="center" variant="h5">Total Balance ₹{balance}</Typography>
         <Typography variant="subtitle1" style={{ lineHeight: '1.5em', marginTop: '20px' }}>
           <InfoCard />
         </Typography>
@@ -30,6 +33,7 @@ const ExpenseTracker = () => {
         </Grid>
       </CardContent>
     </Card>
+    </>
   );
 };
 

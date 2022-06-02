@@ -50,7 +50,7 @@ const NewTransactionForm = () => {
       }
 
       segment.entities.forEach((s) => {
-        const category = `${s.value.charAt(0)}${s.value.slice(1).toLowerCase()}`;
+        const category = `₹{s.value.charAt(0)}₹{s.value.slice(1).toLowerCase()}`;
 
         switch (s.type) {
           case 'amount':
@@ -80,6 +80,7 @@ const NewTransactionForm = () => {
   const selectedCategories = formData.type === 'Income' ? incomeCategories : expenseCategories;
 
   return (
+    
     <Grid container spacing={2}>
       <Snackbar open={open} setOpen={setOpen} />
       <Grid item xs={12}>
@@ -91,6 +92,7 @@ const NewTransactionForm = () => {
       ) : null}
          {/* {isSpeaking ? <BigTranscript /> : 'Start adding transactions'}  */}
         </Typography>
+        
       </Grid>
       <Grid item xs={6}>
         <FormControl fullWidth>
@@ -101,6 +103,7 @@ const NewTransactionForm = () => {
           </Select>
         </FormControl>
       </Grid>
+      
       <Grid item xs={6}>
         <FormControl fullWidth>
           <InputLabel>Category</InputLabel>
